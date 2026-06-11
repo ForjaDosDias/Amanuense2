@@ -114,6 +114,8 @@ class DomainAnalyzerAgent(BaseAgent):
                 art_text = corpus_texts.get(art_id, {}).get("textoCompleto", "")
                 if not art_text:
                     art_text = art_node.get("summary", "")
+                # Definição vige enquanto o artigo que a define vige
+                art_vigencia = art_node.get("vigenciaMeta")
 
                 # Regex-based definitions
                 for m in DEFINICAO_RE.finditer(art_text):
@@ -127,6 +129,7 @@ class DomainAnalyzerAgent(BaseAgent):
                             name=termo,
                             summary=f"Definição legal: {termo} ({doc_id})",
                             tags=[termo.lower().replace(" ", "-")[:30], "definicao"],
+                            vigenciaMeta=art_vigencia,
                         ).model_dump(mode="json")
                         node_dict["sourceDoc"] = doc_id
                         nodes.append(node_dict)
@@ -204,6 +207,7 @@ class DomainAnalyzerAgent(BaseAgent):
                                     name=termo,
                                     summary=d.get("definicao", termo),
                                     tags=[termo.lower().replace(" ", "-")[:30], "definicao"],
+                                    vigenciaMeta=art_vigencia,
                                 ).model_dump(mode="json")
                                 llm_def_dict["sourceDoc"] = doc_id
                                 nodes.append(llm_def_dict)
