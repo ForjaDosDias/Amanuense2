@@ -1,7 +1,1891 @@
 {
-  "generatedAt": "2026-06-06T03:06:52.652474",
+  "generatedAt": "2026-06-06T11:28:16.823076",
   "corpus": "pix-bcb",
-  "total": 0,
-  "byStatus": {},
-  "entries": []
+  "total": 209,
+  "byStatus": {
+    "vigente": 209
+  },
+  "entries": [
+    {
+      "nodeId": "norma:l8245compilado",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:1",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:2",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:3",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:4",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:5",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:6",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:7",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:8",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:9",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:9:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:9:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:9:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:9:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:10",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:11",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:11:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:11:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:12",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:13",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:14",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:15",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:16",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:17",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:18",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:19",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:20",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:21",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:22",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:22:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:22:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:22:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:22:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:22:V",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:22:VI",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:22:VII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:22:VIII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:22:IX",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:22:X",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:23",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:V",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:VI",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:VII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:VIII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:IX",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:X",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:XI",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:23:XII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:24",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:25",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:26",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:27",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:28",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:29",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:30",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:31",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:32",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:33",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:34",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:35",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:36",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:37",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:37:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:37:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:37:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:37:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:38",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:39",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:40",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:40:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:40:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:40:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:40:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:40:V",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:40:VI",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:40:VII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:40:VIII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:40:IX",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:40:X",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:41",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:42",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:43",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:43:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:43:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:43:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:44",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:44:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:44:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:44:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:44:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:45",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:46",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:47",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:47:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:47:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:47:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:47:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:47:V",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:48",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:49",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:50",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:51",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:51:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:51:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:51:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:52",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:52:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:52:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:53",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:53:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:53:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:54",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:54-a",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:55",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:56",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:57",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:58",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:58:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:58:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:58:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:58:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:58:V",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:59",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:59:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:59:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:59:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:59:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:59:V",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:59:VI",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:59:VII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:59:VIII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:59:IX",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:60",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:61",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:62",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:62:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:62:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:62:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:62:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:62:V",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:62:VI",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:63",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:64",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:65",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:66",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:67",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:67:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:67:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:67:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:67:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:67:V",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:67:VI",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:67:VII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:67:VIII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:68",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:68:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:68:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:68:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:68:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:68:V",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:69",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:70",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:71",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:71:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:71:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:71:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:71:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:71:V",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:71:VI",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:71:VII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:72",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:72:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:72:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:72:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:72:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:73",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:74",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:75",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:76",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:77",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:78",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:79",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:80",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:81",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:81:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:81:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:82",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:82:VII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:83",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:84",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:85",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:85:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:86",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:87",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:88",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:89",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "art:l8245compilado:90",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:90:I",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:90:II",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:90:III",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:90:IV",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:90:V",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:90:VI",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:90:VII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    },
+    {
+      "nodeId": "inc:l8245compilado:90:VIII",
+      "normId": "l8245compilado",
+      "status": "vigente",
+      "dataInicio": "2026-01-01",
+      "dataFim": null,
+      "affectedByEdgeIds": [],
+      "ultimaVerificacao": "2026-06-06"
+    }
+  ]
 }
