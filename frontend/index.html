@@ -59,6 +59,9 @@
     <button class="sidebar-btn" data-view="role">
       <span class="icon">◎</span> Por Papel Regulatório
     </button>
+    <button class="sidebar-btn" data-view="leis">
+      <span class="icon">§</span> Texto das Leis
+    </button>
     <button class="sidebar-btn" data-view="timeline">
       <span class="icon">⟳</span> Linha do Tempo
     </button>
@@ -207,6 +210,25 @@
     <div id="role-obligations" style="padding:24px 32px;overflow-y:auto;flex:1"></div>
   </div>
 
+  <!-- Leis (texto estruturado) View -->
+  <div id="leis-view" class="view">
+    <!-- Índice de leis -->
+    <div id="leis-index" class="leis-pane">
+      <div class="leis-header">
+        <h2>Texto das Leis</h2>
+        <p>Índice da base de legislação estruturada — clique em uma lei para ler seus dispositivos</p>
+      </div>
+      <div id="leis-index-list" class="leis-index-list"></div>
+    </div>
+    <!-- Leitura de uma lei -->
+    <div id="lei-doc" class="leis-pane leis-hidden">
+      <div class="lei-doc-toolbar">
+        <button id="lei-back-btn" class="lei-back-btn">← Índice de leis</button>
+      </div>
+      <div id="lei-doc-content"></div>
+    </div>
+  </div>
+
   <!-- Timeline View -->
   <div id="timeline-view" class="view">
     <div style="padding:28px 32px 16px;background:white;border-bottom:1px solid #e2d8c8">
@@ -234,12 +256,26 @@
 
 <div id="tooltip"></div>
 
+<!-- Modal de histórico / conexões de dispositivo -->
+<div id="disp-modal" class="disp-modal leis-hidden">
+  <div class="disp-modal-card">
+    <div class="disp-modal-header">
+      <div>
+        <div id="disp-modal-eyebrow" class="disp-modal-eyebrow"></div>
+        <h3 id="disp-modal-title"></h3>
+      </div>
+      <button id="disp-modal-close" class="disp-modal-close" title="Fechar">✕</button>
+    </div>
+    <div id="disp-modal-body" class="disp-modal-body"></div>
+  </div>
+</div>
+
 <!-- Toast de notificação -->
 <div id="toast" class="toast hidden">
   <span id="toast-msg"></span>
   <button id="toast-close" class="toast-close">✕</button>
 </div>
 
-<script src="app.js?v=5"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>

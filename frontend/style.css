@@ -1075,3 +1075,401 @@ svg text { pointer-events: none; }
 #loading h2 { font-size: 32px; color: var(--gold-light); margin-bottom: 12px; }
 #loading p { color: rgba(255,255,255,0.5); font-size: 16px; }
 #loading.hidden { display: none; }
+
+/* ── TEXTO DAS LEIS (base de legislação estruturada) ── */
+.leis-hidden { display: none !important; }
+
+.leis-pane {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.leis-header {
+  padding: 28px 32px 16px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+}
+.leis-header h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 32px;
+  color: var(--navy);
+}
+.leis-header p { font-size: 15px; color: var(--text-muted); margin-top: 4px; }
+
+.leis-empty {
+  padding: 32px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.leis-empty code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  background: var(--cream-dark);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* Índice de leis */
+.leis-index-list {
+  padding: 24px 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+  align-content: start;
+}
+.lei-index-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 16px 18px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.lei-index-card:hover {
+  border-left-color: var(--gold-light);
+  box-shadow: 0 4px 14px rgba(15,35,64,0.10);
+  transform: translateY(-1px);
+}
+.lei-index-card.lei-revogada { border-left-color: var(--text-muted); opacity: 0.75; }
+.lei-index-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 19px;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.lei-apelido {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--gold-pale);
+  padding: 2px 7px;
+  border-radius: 3px;
+}
+.lei-index-ementa {
+  font-size: 14px;
+  color: var(--text-mid);
+  margin-top: 6px;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.lei-index-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+.lei-meta-alterados { color: var(--yellow); }
+
+/* Leitura da lei */
+.lei-doc-toolbar {
+  padding: 14px 32px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.lei-back-btn {
+  font-family: 'Crimson Pro', serif;
+  font-size: 14px;
+  color: var(--navy);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.lei-back-btn:hover { background: var(--gold-pale); border-color: var(--gold); }
+
+#lei-doc-content {
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 32px 80px;
+}
+
+.lei-doc-header {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+}
+.lei-doc-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.lei-doc-header h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 30px;
+  color: var(--navy);
+  line-height: 1.15;
+}
+.lei-doc-apelido {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--gold);
+  margin-top: 2px;
+}
+.lei-doc-ementa { font-size: 15px; color: var(--text-mid); margin-top: 10px; line-height: 1.5; }
+
+/* Cabeçalhos de agrupamento (Título, Capítulo, Seção…) */
+.lei-agrupamento {
+  text-align: center;
+  margin: 30px 0 14px;
+  font-family: 'EB Garamond', serif;
+  color: var(--navy);
+}
+.lei-agr-rotulo {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.lei-agr-nome { display: block; font-size: 19px; margin-top: 2px; }
+.lei-agrupamento-parte .lei-agr-nome,
+.lei-agrupamento-livro .lei-agr-nome,
+.lei-agrupamento-titulo .lei-agr-nome { font-size: 22px; }
+.lei-agrupamento-secao .lei-agr-nome,
+.lei-agrupamento-subsecao .lei-agr-nome { font-size: 16px; font-style: italic; }
+
+/* Card de dispositivo */
+.disp-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.15s;
+}
+.disp-card:hover { box-shadow: 0 3px 10px rgba(15,35,64,0.08); }
+
+/* Indentação por profundidade (artigo → parágrafo → inciso → alínea…) */
+.disp-nivel-1 { margin-left: 26px; }
+.disp-nivel-2 { margin-left: 52px; }
+.disp-nivel-3 { margin-left: 78px; }
+.disp-nivel-4 { margin-left: 104px; }
+.disp-nivel-5 { margin-left: 130px; }
+
+.disp-nivel-0 { border-left: 3px solid var(--gold); }
+
+.disp-rotulo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--navy-light);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.disp-nivel-0 .disp-rotulo { color: var(--gold); font-size: 13px; }
+
+.disp-texto {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+.disp-revogado { background: var(--cream-dark); opacity: 0.8; }
+.disp-revogado .disp-texto { color: var(--text-muted); }
+
+.disp-foot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border-light);
+}
+.disp-foot-spacer { flex: 1; }
+
+.disp-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 9px;
+}
+.disp-badge-alterado { background: var(--gold-pale); color: var(--yellow); }
+.disp-badge-revogado { background: #f6e0e0; color: var(--red); }
+
+.disp-mini-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--navy-light);
+  background: none;
+  border: 1px solid var(--border-light);
+  border-radius: 11px;
+  padding: 3px 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.disp-mini-btn:hover { border-color: var(--gold); background: var(--gold-pale); color: var(--navy); }
+.disp-mini-count {
+  background: var(--cream-dark);
+  border-radius: 8px;
+  padding: 0 5px;
+  font-size: 9.5px;
+}
+
+/* Modal de histórico / conexões */
+.disp-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,35,64,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 32px;
+}
+.disp-modal-card {
+  background: var(--cream);
+  border-top: 3px solid var(--gold);
+  border-radius: 6px;
+  width: min(720px, 100%);
+  max-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+}
+.disp-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px 14px;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--white);
+  border-radius: 6px 6px 0 0;
+}
+.disp-modal-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.disp-modal-header h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 21px;
+  color: var(--navy);
+  font-weight: 500;
+}
+.disp-modal-close {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px 6px;
+}
+.disp-modal-close:hover { color: var(--red); }
+.disp-modal-body { overflow-y: auto; padding: 18px 22px; }
+
+/* Histórico: linha do tempo de redações */
+.versao-item {
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--border);
+  border-radius: 4px;
+  background: var(--white);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+.versao-item.versao-vigente { border-left-color: var(--green); }
+.versao-item.versao-revogacao { border-left-color: var(--red); background: var(--cream-dark); }
+.versao-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.versao-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--navy-light);
+  border-radius: 3px;
+  padding: 1px 7px;
+}
+.versao-evento { font-size: 14px; color: var(--navy); font-weight: 600; }
+.versao-por { font-size: 13px; color: var(--text-mid); font-style: italic; }
+.versao-periodo {
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+.versao-vigente .versao-periodo { color: var(--green); }
+.versao-texto {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+/* Conexões */
+.conexao-item {
+  display: flex;
+  gap: 12px;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  background: var(--white);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+.conexao-dir {
+  font-size: 17px;
+  color: var(--gold);
+  line-height: 1.3;
+}
+.conexao-body { flex: 1; font-size: 14.5px; color: var(--text); line-height: 1.45; }
+.conexao-verbo { font-weight: 600; color: var(--navy); }
+.conexao-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.conexao-canonico { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; }
+.conexao-obs {
+  margin-top: 6px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-mid);
+  border-left: 2px solid var(--border-light);
+  padding-left: 10px;
+}

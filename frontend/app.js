@@ -14,6 +14,8 @@ const state = {
   tourIndex: 0,
   tourStepIndex: 0,
   highlightedNodes: new Set(),
+  // Texto das Leis (base de legislação estruturada)
+  leis: { indexLoaded: false, currentLei: null },
   // 3D immersive mode
   graphMode: "3d",
   graph3d: null,
@@ -996,6 +998,306 @@ function goToTourStep(tourIdx, stepIdx) {
   renderTourStep(tourIdx, stepIdx);
 }
 
+// ── Texto das Leis (base de legislação estruturada) ───────────────────────────
+const TIPO_NORMA_ORDEM = { artigo: 0, paragrafo: 1, inciso: 2, alinea: 3, item: 4, subitem: 5 };
+
+function formatDateBR(iso) {
+  if (!iso) return "";
+  const [y, m, d] = iso.substring(0, 10).split("-");
+  return `${d}/${m}/${y}`;
+}
+
+function normaTitle(n) {
+  return `${n.tipo} nº ${n.numero}/${n.ano}`;
+}
+
+async function initLeisView() {
+  if (state.leis.indexLoaded) return;
+  const list = $("leis-index-list");
+  list.innerHTML = `<div class="leis-empty">Carregando índice…</div>`;
+
+  let resp;
+  try {
+    resp = await fetch("/api/leis");
+  } catch (_) {
+    list.innerHTML = `<div class="leis-empty">Erro de rede ao consultar a API.</div>`;
+    return;
+  }
+
+  if (resp.status === 503) {
+    list.innerHTML = `<div class="leis-empty">
+      <b>Base de legislação estruturada desabilitada.</b><br>
+      Defina <code>LEGISLACAO_DATABASE_URL</code>, rode <code>amanuense initdb</code>
+      e execute o pipeline para carregar as leis.</div>`;
+    return;
+  }
+  if (!resp.ok) {
+    list.innerHTML = `<div class="leis-empty">Erro ao consultar a base (${resp.status}).</div>`;
+    return;
+  }
+
+  const { leis } = await resp.json();
+  state.leis.indexLoaded = true;
+  renderLeisIndex(leis);
+}
+
+function renderLeisIndex(leis) {
+  const list = $("leis-index-list");
+  if (!leis.length) {
+    list.innerHTML = `<div class="leis-empty">Nenhuma lei carregada na base ainda —
+      execute o pipeline com a base estruturada habilitada.</div>`;
+    return;
+  }
+
+  list.innerHTML = leis.map(l => `
+    <div class="lei-index-card${l.status === "revogada" ? " lei-revogada" : ""}" data-id="${l.id_norma}">
+      <div class="lei-index-title">
+        ${escapeHtml(normaTitle(l))}
+        ${l.apelido ? `<span class="lei-apelido">${escapeHtml(l.apelido)}</span>` : ""}
+      </div>
+      ${l.ementa ? `<div class="lei-index-ementa">${escapeHtml(l.ementa)}</div>` : ""}
+      <div class="lei-index-meta">
+        <span class="status-badge status-${l.status === "vigente" ? "vigente" : l.status === "revogada" ? "revogado" : "suspenso"}">${escapeHtml(l.status)}</span>
+        <span>${l.num_dispositivos} dispositivo${l.num_dispositivos === 1 ? "" : "s"}</span>
+        ${l.num_alterados > 0 ? `<span class="lei-meta-alterados">⟳ ${l.num_alterados} alterado${l.num_alterados === 1 ? "" : "s"}</span>` : ""}
+        ${l.data_publicacao ? `<span>publicada em ${formatDateBR(l.data_publicacao)}</span>` : ""}
+      </div>
+    </div>
+  `).join("");
+
+  list.querySelectorAll(".lei-index-card").forEach(card => {
+    card.addEventListener("click", () => openLei(parseInt(card.dataset.id)));
+  });
+}
+
+async function openLei(idNorma) {
+  const content = $("lei-doc-content");
+  $("leis-index").classList.add("leis-hidden");
+  $("lei-doc").classList.remove("leis-hidden");
+  content.innerHTML = `<div class="leis-empty">Carregando lei…</div>`;
+
+  let resp;
+  try {
+    resp = await fetch(`/api/leis/${idNorma}`);
+  } catch (_) {
+    content.innerHTML = `<div class="leis-empty">Erro de rede ao consultar a API.</div>`;
+    return;
+  }
+  if (!resp.ok) {
+    content.innerHTML = `<div class="leis-empty">Erro ao carregar a lei (${resp.status}).</div>`;
+    return;
+  }
+
+  const data = await resp.json();
+  state.leis.currentLei = data;
+  renderLeiDoc(data);
+  $("lei-doc").scrollTop = 0;
+}
+
+function closeLei() {
+  state.leis.currentLei = null;
+  $("lei-doc").classList.add("leis-hidden");
+  $("leis-index").classList.remove("leis-hidden");
+}
+
+// Monta o rótulo completo de um agrupamento subindo a cadeia de pais
+// ("Capítulo II — Do Tratamento" dentro de "Título I — ...")
+function agrupamentoChain(id, byId) {
+  const chain = [];
+  let cur = byId.get(id);
+  while (cur) {
+    chain.unshift(cur);
+    cur = cur.id_pai ? byId.get(cur.id_pai) : null;
+  }
+  return chain;
+}
+
+function renderLeiDoc(data) {
+  const { norma, agrupamentos, dispositivos } = data;
+  const agrById = new Map(agrupamentos.map(a => [a.id_agrupamento, a]));
+
+  let html = `
+    <header class="lei-doc-header">
+      <div class="lei-doc-eyebrow">${escapeHtml(norma.orgao_emissor || norma.esfera || "")}</div>
+      <h2>${escapeHtml(normaTitle(norma))}</h2>
+      ${norma.apelido ? `<div class="lei-doc-apelido">${escapeHtml(norma.apelido)}</div>` : ""}
+      ${norma.ementa ? `<p class="lei-doc-ementa">${escapeHtml(norma.ementa)}</p>` : ""}
+      <div class="lei-index-meta">
+        <span class="status-badge status-${norma.status === "vigente" ? "vigente" : norma.status === "revogada" ? "revogado" : "suspenso"}">${escapeHtml(norma.status)}</span>
+        ${norma.data_publicacao ? `<span>publicada em ${formatDateBR(norma.data_publicacao)}</span>` : ""}
+      </div>
+    </header>
+  `;
+
+  if (!dispositivos.length) {
+    html += `<div class="leis-empty">Nenhum dispositivo carregado para esta lei.</div>`;
+    $("lei-doc-content").innerHTML = html;
+    return;
+  }
+
+  let agrAtual = null;
+  dispositivos.forEach(d => {
+    // Cabeçalho de agrupamento (Capítulo, Seção…) quando o artigo muda de divisão
+    if (d.tipo === "artigo" && d.id_agrupamento !== agrAtual) {
+      agrAtual = d.id_agrupamento;
+      if (d.id_agrupamento != null) {
+        agrupamentoChain(d.id_agrupamento, agrById).forEach(a => {
+          html += `<div class="lei-agrupamento lei-agrupamento-${escapeHtml(a.tipo)}">
+            ${a.numero_rotulo ? `<span class="lei-agr-rotulo">${escapeHtml(a.numero_rotulo)}</span>` : ""}
+            ${a.nome ? `<span class="lei-agr-nome">${escapeHtml(a.nome)}</span>` : ""}
+          </div>`;
+        });
+      }
+    }
+    html += dispCardHtml(d);
+  });
+
+  $("lei-doc-content").innerHTML = html;
+
+  $("lei-doc-content").querySelectorAll(".disp-mini-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const dispId = parseInt(btn.dataset.disp);
+      if (btn.dataset.action === "historico") openDispHistorico(norma.id_norma, dispId);
+      else openDispConexoes(norma.id_norma, dispId);
+    });
+  });
+}
+
+function dispCardHtml(d) {
+  const revogado = d.situacao === "revogado";
+  const temHistorico = d.num_versoes > 1;
+  const temConexoes = d.num_conexoes > 0;
+  const nivel = Math.min(d.nivel ?? TIPO_NORMA_ORDEM[d.tipo] ?? 0, 5);
+
+  const badges = [];
+  if (revogado) {
+    badges.push(`<span class="disp-badge disp-badge-revogado">revogado${d.redacao_dada_por ? ` pela ${escapeHtml(d.redacao_dada_por)}` : ""}</span>`);
+  } else if (d.numero_versao > 1 && d.redacao_dada_por) {
+    badges.push(`<span class="disp-badge disp-badge-alterado">redação dada pela ${escapeHtml(d.redacao_dada_por)}</span>`);
+  } else if (d.redacao_dada_por) {
+    // numero_versao 1 com norma alteradora = dispositivo acrescentado por lei posterior
+    badges.push(`<span class="disp-badge disp-badge-alterado">incluído pela ${escapeHtml(d.redacao_dada_por)}</span>`);
+  }
+
+  const botoes = [];
+  if (temHistorico) {
+    botoes.push(`<button class="disp-mini-btn" data-action="historico" data-disp="${d.id_dispositivo}"
+      title="Ver redações anteriores">⟳ Histórico <span class="disp-mini-count">${d.num_versoes}</span></button>`);
+  }
+  if (temConexoes) {
+    botoes.push(`<button class="disp-mini-btn" data-action="conexoes" data-disp="${d.id_dispositivo}"
+      title="Ver correlações com outros dispositivos">⬡ Conexões <span class="disp-mini-count">${d.num_conexoes}</span></button>`);
+  }
+
+  const footer = (badges.length || botoes.length)
+    ? `<div class="disp-foot">${badges.join("")}<span class="disp-foot-spacer"></span>${botoes.join("")}</div>`
+    : "";
+
+  return `<article class="disp-card disp-nivel-${nivel}${revogado ? " disp-revogado" : ""}" id="disp-${d.id_dispositivo}">
+    <div class="disp-rotulo">${escapeHtml(d.numero_rotulo)}</div>
+    <div class="disp-texto">${revogado ? "<em>(Revogado)</em>" : escapeHtml(d.texto || "")}</div>
+    ${footer}
+  </article>`;
+}
+
+// ── Modal: histórico de redações ──────────────────────────────────────────────
+async function openDispHistorico(idNorma, idDisp) {
+  openDispModal("Histórico de redações", "Carregando…");
+  let resp;
+  try {
+    resp = await fetch(`/api/leis/${idNorma}/dispositivos/${idDisp}/historico`);
+  } catch (_) { resp = null; }
+  if (!resp || !resp.ok) {
+    $("disp-modal-body").innerHTML = `<div class="leis-empty">Erro ao carregar o histórico.</div>`;
+    return;
+  }
+  const { dispositivo, versoes } = await resp.json();
+
+  $("disp-modal-eyebrow").textContent = `${dispositivo.norma}${dispositivo.norma_apelido ? " · " + dispositivo.norma_apelido : ""}`;
+  $("disp-modal-title").textContent = `${dispositivo.numero_rotulo} — Histórico de redações`;
+
+  const eventoLabel = { redacao_original: "Redação original", alteracao: "Alteração", revogacao: "Revogação", renumeracao: "Renumeração" };
+  $("disp-modal-body").innerHTML = versoes.map(v => `
+    <div class="versao-item ${v.vigente_ate ? "" : "versao-vigente"} ${v.evento === "revogacao" ? "versao-revogacao" : ""}">
+      <div class="versao-head">
+        <span class="versao-num">v${v.numero_versao}</span>
+        <span class="versao-evento">${eventoLabel[v.evento] || v.evento}</span>
+        ${v.por_norma ? `<span class="versao-por">pela ${escapeHtml(v.por_norma)}${v.por_norma_apelido ? ` (${escapeHtml(v.por_norma_apelido)})` : ""}</span>` : ""}
+        <span class="versao-periodo">${formatDateBR(v.vigente_de)} → ${v.vigente_ate ? formatDateBR(v.vigente_ate) : "vigente"}</span>
+      </div>
+      <div class="versao-texto">${v.evento === "revogacao" ? "<em>(Dispositivo revogado)</em>" : escapeHtml(v.texto || "")}</div>
+    </div>
+  `).join("");
+}
+
+// ── Modal: conexões normativas ────────────────────────────────────────────────
+async function openDispConexoes(idNorma, idDisp) {
+  openDispModal("Conexões normativas", "Carregando…");
+  let resp;
+  try {
+    resp = await fetch(`/api/leis/${idNorma}/dispositivos/${idDisp}/conexoes`);
+  } catch (_) { resp = null; }
+  if (!resp || !resp.ok) {
+    $("disp-modal-body").innerHTML = `<div class="leis-empty">Erro ao carregar as conexões.</div>`;
+    return;
+  }
+  const { dispositivo, conexoes } = await resp.json();
+
+  $("disp-modal-eyebrow").textContent = `${dispositivo.norma}${dispositivo.norma_apelido ? " · " + dispositivo.norma_apelido : ""}`;
+  $("disp-modal-title").textContent = `${dispositivo.numero_rotulo} — Conexões normativas`;
+
+  if (!conexoes.length) {
+    $("disp-modal-body").innerHTML = `<div class="leis-empty">Nenhuma conexão registrada.</div>`;
+    return;
+  }
+
+  // direção ativa  = este dispositivo pratica a relação ("altera o Art. X da Lei Y")
+  // direção passiva = este dispositivo sofre a relação ("regulamentado pela Lei Y")
+  const verboAtivo  = { altera: "altera", revoga: "revoga", acrescenta: "acrescenta", regulamenta: "regulamenta", suspende: "suspende", remete: "remete a", conflito_potencial: "conflito potencial com" };
+  const verboPassivo = { regulamenta: "regulamentado por", suspende: "suspenso por", remete: "referenciado por", conflito_potencial: "conflito potencial com" };
+
+  $("disp-modal-body").innerHTML = conexoes.map(c => {
+    const verbo = c.direcao === "ativa"
+      ? (verboAtivo[c.tipo_relacao] || c.tipo_relacao)
+      : (verboPassivo[c.tipo_relacao] || c.tipo_relacao);
+    const alvo = `${c.outro_rotulo ? escapeHtml(c.outro_rotulo) + " da " : ""}${escapeHtml(c.outra_norma)}${c.outra_norma_apelido ? ` (${escapeHtml(c.outra_norma_apelido)})` : ""}`;
+    return `<div class="conexao-item">
+      <span class="conexao-dir" title="${c.direcao === "ativa" ? "relação de saída" : "relação de entrada"}">${c.direcao === "ativa" ? "→" : "←"}</span>
+      <div class="conexao-body">
+        <div><span class="conexao-verbo">${escapeHtml(verbo)}</span> ${alvo}</div>
+        <div class="conexao-meta">
+          ${c.data_efeito ? `<span>efeitos a partir de ${formatDateBR(c.data_efeito)}</span>` : ""}
+          ${c.outro_id_canonico ? `<span class="conexao-canonico">${escapeHtml(c.outro_id_canonico)}</span>` : ""}
+        </div>
+        ${c.observacao ? `<div class="conexao-obs">${escapeHtml(c.observacao)}</div>` : ""}
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function openDispModal(titulo, corpo) {
+  $("disp-modal-eyebrow").textContent = "";
+  $("disp-modal-title").textContent = titulo;
+  $("disp-modal-body").innerHTML = `<div class="leis-empty">${corpo}</div>`;
+  $("disp-modal").classList.remove("leis-hidden");
+}
+
+function closeDispModal() {
+  $("disp-modal").classList.add("leis-hidden");
+}
+
+function bindLeisEvents() {
+  $("lei-back-btn").addEventListener("click", closeLei);
+  $("disp-modal-close").addEventListener("click", closeDispModal);
+  $("disp-modal").addEventListener("click", (e) => {
+    if (e.target === $("disp-modal")) closeDispModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !$("disp-modal").classList.contains("leis-hidden")) closeDispModal();
+  });
+}
+
 // ── Search ────────────────────────────────────────────────────────────────────
 function setupSearch() {
   const input = $("search-input");
@@ -1042,6 +1344,7 @@ function switchView(viewName) {
   if (viewEl) viewEl.classList.add("active");
   const btnEl = $q(`.sidebar-btn[data-view="${viewName}"]`);
   if (btnEl) btnEl.classList.add("active");
+  if (viewName === "leis") initLeisView();
   if (viewName === "graph" && state.graph) {
     setTimeout(() => {
       if (state.graphMode === "3d" && has3D()) {
@@ -1059,10 +1362,6 @@ function switchView(viewName) {
 
 // ── Events ────────────────────────────────────────────────────────────────────
 function bindEvents() {
-  document.querySelectorAll(".sidebar-btn[data-view]").forEach(btn => {
-    btn.addEventListener("click", () => switchView(btn.dataset.view));
-  });
-
   $("filter-node-type").addEventListener("change", (e) => { state.filters.nodeType = e.target.value; renderGraph(); });
   $("filter-status").addEventListener("change", (e) => { state.filters.status = e.target.value; renderGraph(); });
   $("filter-edge-type").addEventListener("change", (e) => { state.filters.edgeType = e.target.value; renderGraph(); });
@@ -1142,6 +1441,12 @@ function escapeHtml(text) {
 
 // ── Bootstrap ─────────────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
+  // Navegação entre views fica fora de bindEvents(): a view "Texto das Leis"
+  // lê direto da base estruturada e deve funcionar mesmo sem grafo gerado.
+  document.querySelectorAll(".sidebar-btn[data-view]").forEach(btn => {
+    btn.addEventListener("click", () => switchView(btn.dataset.view));
+  });
+  bindLeisEvents();
   bindCorpusEvents();
   init();
 });
