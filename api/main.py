@@ -11,10 +11,12 @@ from db.models import CorpusDocument, PipelineRun
 from db.session import get_db
 from pipeline.config import CORPUS_DIR, OUTPUT_DIR
 from pipeline.corpus_registry import detect_metadata, save_registry
+from api.leis import router as leis_router
 from api.runner import start_run, stream_events
 
 
 app = FastAPI(title="Amanuense API")
+app.include_router(leis_router)
 
 
 # ── Corpus ────────────────────────────────────────────────────────────────────
