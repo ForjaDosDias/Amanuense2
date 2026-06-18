@@ -1,0 +1,45 @@
+# CI — testes (GitHub-hosted). Vira o status check obrigatório "test".
+# Stack: Python (pytest) + Postgres 16 (testes de leitura de leis) + tesseract-ocr (pytesseract).
+name: ci
+
+on:
+  pull_request:
+    branches: [dev, main]
+  push:
+    branches: [dev, main]
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: legislacao
+          POSTGRES_USER: amanuense
+          POSTGRES_PASSWORD: amanuense
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U amanuense -d legislacao"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+
+    env:
+      LEGISLACAO_DATABASE_URL: postgresql://amanuense:amanuense@localhost:5432/legislacao
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Instalar tesseract-ocr
+        run: sudo apt-get update && sudo apt-get install -y tesseract-ocr
+      - name: Instalar dependências (app + api + dev)
+        run: pip install -e ".[dev,api]"
+      - name: Rodar testes
+        run: pytest
