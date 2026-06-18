@@ -57,7 +57,7 @@ DOCS = [
 @pytest.fixture()
 def ambiente(tmp_path: Path):
     """Monta intermediate/ + corpus/ sintéticos e limpa as normas de teste do DB."""
-    from db.legislacao import get_conn, init_legislacao_db
+    from db.legislacao import get_conn, init_legislacao_db, legislacao_enabled
 
     init_legislacao_db()
     intermediate = tmp_path / "intermediate"
@@ -71,6 +71,10 @@ def ambiente(tmp_path: Path):
     )
 
     def _limpar():
+        # test_arvore_gerada_sem_db remove LEGISLACAO_DATABASE_URL (modo legado);
+        # esse estado vaza para o teardown do fixture — sem base não há o que limpar.
+        if not legislacao_enabled():
+            return
         with get_conn() as conn:
             conn.execute(
                 """
