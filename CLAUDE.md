@@ -78,3 +78,33 @@ mypy pipeline/
 - Não criar novos schemas fora de `pipeline/schemas/` — o `graph-builder` valida com `model_validate`.
 - Não usar `ClaudeClient` para chamar a API real da Anthropic — o nome é alias do DeepSeek.
 - Não tocar as tabelas da base de legislação via ORM/Alembic nem INSERT direto — DDL é `db/sql/`, mutação é via `fn_*`.
+
+## Fluxo de trabalho e Git
+
+> Regra da frota — idêntica nos 5 projetos da VPS. Atualizada em 2026-08-06.
+
+**Todo trabalho começa por um plano.** Levantar o que já existe, decidir a abordagem e só então
+implementar.
+
+**Ao final de todo plano, sincronizar tudo:**
+```bash
+git add -A && git commit -m "tipo: descrição"
+git push origin main        # push direto — é o fluxo atual
+git push origin main:dev    # mantém a dev alinhada
+```
+
+**Por que push direto na `main`:** nenhuma aplicação da VPS tem cliente hoje, e o gate de aprovação
+humana do fluxo `feature → dev → main` só atrasa o desenvolvimento. Os `bypass_actors` de admin nos
+rulesets são **intencionais**, não descuido.
+
+**A `dev` é mantida em dia de propósito.** Ela não está em uso, mas fica idêntica à `main` para que
+o fluxo com PR volte sem migração no dia em que houver cliente.
+
+**Quando houver cliente:** remover os bypasses dos rulesets e voltar para `feature → dev → main` com
+PR, check `test` verde e 1 aprovação humana. A esteira já está montada — só o bypass precisa sair.
+
+Push na `main` dispara o deploy automático na VPS (self-hosted runner).
+
+⚠️ **Commitar ANTES de qualquer push.** Este diretório é o alvo do deploy: todo push na `main`
+dispara o workflow, que faz `git reset --hard FETCH_HEAD` aqui. Qualquer alteração não commitada
+é **destruída** — aconteceu em 06/08/2026 com uma edição de CLAUDE.md.
