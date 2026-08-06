@@ -1,3 +1,12 @@
+> ⚠️ **Este documento descreve o fluxo ANTERIOR e está suspenso desde 06/08/2026.**
+>
+> O fluxo em vigor é **push direto na `main`** + `git push origin main:dev`, porque nenhuma
+> aplicação da VPS tem cliente e o gate de aprovação humana só atrasa. Ver a seção
+> "Fluxo de trabalho e Git" no `CLAUDE.md` deste repositório.
+>
+> O conteúdo abaixo continua válido como referência: é exatamente para ele que voltamos
+> quando houver cliente — basta remover os `bypass_actors` dos rulesets.
+
 # Como contribuir
 
 Este projeto roda em **produção** na VPS. O merge na `main` **dispara deploy automático**, então o
