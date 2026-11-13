@@ -1,3 +1,8 @@
+**Amanuense (English summary).** Turns Brazilian Central Bank (BCB) / Pix regulation PDFs into a navigable knowledge graph of norms, articles and their relations, including which norm revoked or amended which.
+**How:** a 10-stage Python pipeline (`pipeline/agents/`): PDF-to-Markdown parsing (pdfplumber, PyMuPDF, Tesseract OCR), a canonical norm tree loaded into a versioned PostgreSQL legislation base, regex-based revocation/hierarchy detection, then LLM stages (DeepSeek-V3 via the OpenAI SDK) for summaries, implied relations, domain nodes, graph review and thematic tours.
+**Stack:** Python 3.11, Pydantic v2, FastAPI, SQLAlchemy + Alembic, PostgreSQL 16, NetworkX, D3.js frontend, Docker Compose.
+**Quality:** pytest suite (`tests/`) run in GitHub Actions CI against a Postgres service; Ruff and mypy configured. The body below is in Portuguese.
+
 # Amanuense
 
 > ## ⚠️ TEMPORÁRIO — REMOVER ASSIM QUE POSSÍVEL: bypass de review na `main`
